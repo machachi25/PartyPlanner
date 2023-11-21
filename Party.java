@@ -5,10 +5,12 @@ import java.util.ArrayList; // import for the array list
 
 public class Party
 {
-	 ArrayList<Attendees> roster = new ArrayList<Attendees>();
-	String myArray;
- 
- 
+	ArrayList<Attendees> roster = new ArrayList<Attendees>();
+	String myArray[];
+	Scanner scan  = new Scanner(System.in);
+	// create instance variables the add method
+	int guestID, compID;
+	String guestName;
  
  public void loadGuests()
  {
@@ -18,10 +20,17 @@ public class Party
       Scanner myReader = new Scanner(myObj);
       while (myReader.hasNextLine()) {
         String data = myReader.nextLine();
-        // "123, Mike, Smith, 12"
+        // "123, Smith, Mike, 12"
         myArray = data.split(",");
-        //["123", "Mike Smith", "12"]
-        System.out.println(data);
+        //["123", "Smith", "Mike", "12"]
+        int aID = Integer.parseInt(myArray[0]);
+        String aName = myArray[2] + myArray[1];
+        int cID = Integer.parseInt(myArray[3]);
+        Attendees a1 = new Attendees(aID, aName, cID);
+        System.out.println(a1);
+        roster.add(a1);
+        
+        
       }
       myReader.close();
     } 
@@ -32,7 +41,22 @@ public class Party
     }
     
     
-}
+	}//close load guests
+	
+	public void addGuests()
+	{
+		System.out.println("Enter your guest's ID: ");
+		guestID = scan.nextInt();
+		String temp = scan.nextLine(); //clearing our buffers
+		System.out.println("Enter your guest's name: ");
+		guestName = scan.nextLine();
+		System.out.println("Enter your guest's company ID: ");
+		compID = scan.nextInt();
+		Attendees a2 = new Attendees(guestID, guestName, compID);
+		System.out.println(a2);
+		roster.add(a2);
+	}
+	
 }
 	 
 	 
