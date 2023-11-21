@@ -6,5 +6,7 @@ public class Runner
 	{
 		Party p1 = new Party();
 		p1.loadGuests();
+		p1.addGuests();
+		
 	}
 }
