@@ -45,16 +45,19 @@ public class Party
 	
 	public void addGuests()
 	{
-		System.out.println("Enter your guest's ID: ");
-		guestID = scan.nextInt();
-		String temp = scan.nextLine(); //clearing our buffers
-		System.out.println("Enter your guest's name: ");
-		guestName = scan.nextLine();
-		System.out.println("Enter your guest's company ID: ");
-		compID = scan.nextInt();
-		Attendees a2 = new Attendees(guestID, guestName, compID);
-		System.out.println(a2);
-		roster.add(a2);
+		for(int i = 0; i < 10; i++)
+			{
+				System.out.println("Enter your guest's ID: ");
+				guestID = scan.nextInt();
+				String temp = scan.nextLine(); //clearing our buffers
+				System.out.println("Enter your guest's name: ");
+				guestName = scan.nextLine();
+				System.out.println("Enter your guest's company ID: ");
+				compID = scan.nextInt();
+				Attendees a2 = new Attendees(guestID, guestName, compID);
+				System.out.println(a2);
+				roster.add(a2);
+			}
 	}
 	
 }
