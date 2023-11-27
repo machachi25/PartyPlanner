@@ -1,4 +1,15 @@
-import java.util.*;
+/**
+Attendees.java
+@author Chinmay Machavaram
+@since 11/26/23
+This class is where the attendee objects contian their attributes and their methods
+ * party is where they are added and such
+ */
+
+
+import java.util.*; 
+
+
 public class Attendees
 {
 	private int iD;
@@ -26,7 +37,7 @@ public class Attendees
 		public int getID()  {//
 		return iD;
 	}
-	public String setName()  {//
+	public String getName()  {//
 		return name;
 		}
 	public int setCompany() {
@@ -34,10 +45,20 @@ public class Attendees
 	}
 	
 	
-	public String toString()
+	public String toString() 
 	{
 		return(name + " has an ID of: " + iD + " and works for " + companyID + " .");
 	}
-		
+	
+	public int company() //will return the company ID for purposes in the party class and for table boolean in Tables class file
+	{
+		return companyID;
+	}	
+	public void table() //unused method
+	{
+
+	}
 }
+
+
 
