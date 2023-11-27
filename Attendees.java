@@ -15,7 +15,8 @@ public class Attendees
 	private int iD;
 	private String name;
 	private int companyID;
-	
+	private int table = 0;
+	private int seat = 0;
 	public Attendees(int newID, String newName, int newCompanyID) //constructor
 	{
 			iD = newID;
@@ -58,7 +59,21 @@ public class Attendees
 	{
 
 	}
+	public void setTable(int tableNum) //method to get the table number
+	{
+		table = tableNum; 
+	}
+	public int getTable()
+	{
+		return table;
+	}
+	public void setSeat(int seatNum)
+	{
+		seat = seatNum;
+	}
+	public int getSeat()
+	{
+		return seat;
+	}
+	
 }
-
-
-
