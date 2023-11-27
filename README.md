@@ -1,1 +1,3 @@
 # PartyPlanner
+
+The goal of this project is to ease the confusions of party planning, by using code to make the computer do the work for you! It will let you add 10 guests to your party, and then even place them at a table, and even better to make sure everyone gets to meet more and more new people, no one from the same company as them will be sitting with them at their table! You can also look for a specific attendee and get their table number and seat number as well, and you can even see all of the poeple workign for a specific company, along witht eh whole list of everyone attneding your party.
