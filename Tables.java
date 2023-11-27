@@ -45,4 +45,31 @@ public class Tables
                 seat++;
             }
         }
+        public void setTable(Attendees person, int tableCounter) //method to get the table number of one table, then in the party and attendees classes for all 10 will occur
+        {
+			int index = -1;
+			int count = 0; 
+			for(Attendees guest: place)
+			{
+				if(guest.getName().equals(person.getName()))
+				{
+					index = count;
+					break;
+				}
+				count++; 
+			}
+			place.get(index).setTable(tableCounter) ;
+			
+		}
+		
+		public void setSeat()
+		{
+			int seater = 1;
+			
+			for(Attendees attendee : place)
+			{
+				attendee.setSeat(seater);
+				seater++;
+			}
+		}
 }
